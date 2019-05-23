@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Goal
   - Guard
+  - VerticalGuard
+  - Gate
   layers:
   - Default
   - TransparentFX

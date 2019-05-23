@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
 
     public int health = 3;
     public GameObject effect;
+    public Text healthDisplay;
+
+    public GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +30,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthDisplay.text = health.ToString();
+
         if (health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameOver.SetActive(true);
+            Destroy(gameObject);
         }
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 

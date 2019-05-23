@@ -6,6 +6,7 @@ public class ObstacleController : MonoBehaviour
 {
     public int damage = 1;
     public float speed;
+    public GameObject effect;
 
     void Update()
     {
@@ -16,6 +17,7 @@ public class ObstacleController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
             other.GetComponent<PlayerController>().health--;
             
 

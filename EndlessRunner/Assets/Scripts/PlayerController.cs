@@ -9,10 +9,13 @@ public class PlayerController : MonoBehaviour
     public float YIncrement;
     public float speed;
 
+    //public Animator camAnim;
+
     public float maxHeight;
     public float minHeight;
 
     public int health = 3;
+    public GameObject effect;
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +35,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
         {
             targetPos = new Vector2(transform.position.x, transform.position.y + YIncrement);
+            //camAnim.SetTrigger("shake");
+            Instantiate(effect, transform.position, Quaternion.identity);
         } else if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
         {
             targetPos = new Vector2(transform.position.x, transform.position.y - YIncrement);
+            //camAnim.SetTrigger("shake");
+            Instantiate(effect, transform.position, Quaternion.identity);
         }
     }
 }

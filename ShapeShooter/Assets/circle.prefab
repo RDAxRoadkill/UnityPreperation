@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3489572146006706843}
   m_Layer: 0
   m_Name: circle
-  m_TagString: Projectile
+  m_TagString: CircleProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.64, y: 2.66}
+    oldSize: {x: 1.76, y: 1.7733333}
     newSize: {x: 2.64, y: 2.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

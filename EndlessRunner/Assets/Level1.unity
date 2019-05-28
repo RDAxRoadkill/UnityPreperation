@@ -505,6 +505,7 @@ MonoBehaviour:
   health: 3
   effect: {fileID: 2345197323565410651, guid: 4821c6ab6554349429f2ad7b353ae6af, type: 3}
   healthDisplay: {fileID: 1407731894}
+  gameOver: {fileID: 940465871}
 --- !u!50 &690148127
 Rigidbody2D:
   serializedVersion: 4
@@ -700,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &940465872
 RectTransform:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         
     }
 
     // Update is called once per frame
@@ -32,5 +31,21 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void Shoot(int obstacle)
+    {
+        Debug.Log("Pew Pew" + obstacle);
+        if(obstacle == 0)
+        {
+            Instantiate(square, transform.position, Quaternion.identity);
+        } else if (obstacle == 1)
+        {
+            Instantiate(triangle, transform.position, Quaternion.identity);
+        } else if (obstacle == 2)
+        {
+            Instantiate(circle, transform.position, Quaternion.identity);
+        }
+        
     }
 }

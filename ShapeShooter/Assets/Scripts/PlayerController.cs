@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot(int obstacle)
     {
-        Debug.Log("Pew Pew" + obstacle);
         if(obstacle == 0)
         {
             Instantiate(square, transform.position, Quaternion.identity);
